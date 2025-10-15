@@ -26,6 +26,7 @@ type Server struct {
 func (s *Server) HandleRides(w http.ResponseWriter, r *http.Request) {
 	if r.Method != "POST" {
 		http.Error(w, "Invalid request method", http.StatusMethodNotAllowed)
+		return
 	}
 
 	body, err := ioutil.ReadAll(r.Body)
@@ -72,6 +73,7 @@ func (s *Server) HandleRides(w http.ResponseWriter, r *http.Request) {
 	}
 
 	log.Printf("requestID:%s - Driver with ID %s is available to handle the request", request.RequestID, resp.ID)
+	w.Header().Set("Content-Type", "application/json")
 	fmt.Fprintf(w, string(msg.Data))
 }
 

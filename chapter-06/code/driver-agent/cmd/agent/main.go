@@ -7,7 +7,7 @@ import (
 	"os"
 	"runtime"
 
-	"github.com/nats-io/go-nats"
+	nats "github.com/nats-io/nats.go"
 	"github.com/wallyqs/practical-nats/chapter-06/code/driver-agent"
 	"github.com/wallyqs/practical-nats/chapter-06/code/kit"
 )
