@@ -8,7 +8,7 @@ import (
 	"runtime"
 
 	nats "github.com/nats-io/nats.go"
-	"github.com/wallyqs/practical-nats/chapter-06/code/api-server"
+	apiserver "github.com/wallyqs/practical-nats/chapter-06/code/api-server"
 	"github.com/wallyqs/practical-nats/chapter-06/code/kit"
 )
 
